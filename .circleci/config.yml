@@ -34,7 +34,6 @@ jobs:
       - restore_cache:
           key: npm-v1-{{ checksum "package-lock.json" }}
       #==========ここまで追加==========
-      - run: npm ci #==========この行を削除==========
       #==========ここから追加==========
       - run:
           name: npm ci
