@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/php:7.3-node-browsers
       #==========ここから追加==========
-      - image: circleci/postgres:11.6-alpine
+      - image: cimg/postgres:11.17
         environment:
           POSTGRES_DB: larasns
           POSTGRES_USER: default
