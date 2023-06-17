@@ -40,12 +40,5 @@ jobs:
             - node_modules
       - run: npm run dev
       - run:
-          name: get ready for postgres
-          command: |
-            sudo apt update
-            sudo apt install libpq-dev
-            sudo docker-php-ext-install pdo_pgsql
-            dockerize -wait tcp://localhost:5432 -timeout 1m
-      - run:
           name: php test
           command: vendor/bin/phpunit
